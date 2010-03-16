@@ -24,6 +24,10 @@ def issues(*args)
   File.join("issues", "fcoury", "octopi", args)
 end
 
+def issue_comments(*args)
+  File.join("issues", "fcoury", "octopi", "comments", args)
+end
+
 def repos(*args)
   File.join("repos", "fcoury", "octopi", args)
 end
@@ -69,6 +73,10 @@ def fake_everything
         "issues/show/fcoury/octopi/27" => issues("27"),
         # Open issue
         "issues/show/fcoury/octopi/28" => issues("28"),
+
+        # Issue comments
+        "issues/comments/fcoury/octopi/27" => issue_comments("27"),
+        "issues/comments/fcoury/octopi/28" => issue_comments("28"),
         
         "repos/show/fcoury/octopi/collaborators" => File.join("repos", "fcoury", "octopi", "collaborators"), 
         "repos/show/fcoury" => File.join("repos", "show", "fcoury"),

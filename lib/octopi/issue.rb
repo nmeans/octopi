@@ -98,6 +98,11 @@ module Octopi
       data = Api.api.post(command_path("comment"), { :comment => comment })
       IssueComment.new(data['comment'])
     end
+
+    def comments
+      data = Api.api.get(command_path("comments"))
+      data["comments"].map{|d| IssueComment.new(d)}
+    end
     
     private
     def prefix(command)

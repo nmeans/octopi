@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Server: nginx/0.7.61
+Date: Tue, 16 Mar 2010 20:27:36 GMT
+Content-Type: application/x-yaml; charset=utf-8
+Connection: keep-alive
+Status: 200 OK
+ETag: "1c78064636fc5444a5dbe092557bf7f4"
+X-Runtime: 261ms
+Content-Length: 439
+Set-Cookie: _github_ses=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--884981fc5aa85daf318eeff084d98e2cff92578f; path=/; expires=Wed, 01 Jan 2020 08:00:00 GMT; HttpOnly
+Cache-Control: private, max-age=0, must-revalidate
+
+--- 
+comments: 
+- created_at: 2009-08-23 00:38:09 -07:00
+  body: This is fixed in recent release.
+  updated_at: 2009-08-23 00:38:09 -07:00
+  id: 41214
+  user: radar
+- created_at: 2009-08-24 00:50:21 -07:00
+  body: |-
+    Real world test for this commited: http://github.com/fcoury/octopi/commit/5973d707c1a1ec0418a26cbafe0fd3b6958066ca
+    
+    This proves that it works.
+  updated_at: 2009-08-24 00:50:21 -07:00
+  id: 41490
+  user: radar
+

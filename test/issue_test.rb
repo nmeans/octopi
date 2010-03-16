@@ -9,6 +9,7 @@ class IssueTest < Test::Unit::TestCase
     @repo = @user.repository("octopi")
     @issue = Issue.find(:user => @user, :repo => @repo, :number => 28)
     @closed = Issue.find(:user => @user, :repo => @repo, :number => 27)
+    @no_comments = @closed
   end
 
   
@@ -114,6 +115,19 @@ class IssueTest < Test::Unit::TestCase
       should "be able to comment" do
         comment = @issue.comment("Yes, it is broken.")
         assert comment.is_a?(IssueComment)
+      end
+
+    end
+    context "listing comments for an issue" do
+      should "return a list of comments" do
+        comments = @issue.comments
+        assert_equal 2, comments.size
+        assert comments.first.is_a?(IssueComment)
+      end
+
+      should "return no comments" do
+        comments = @no_comments.comments
+        assert_equal 0, comments.size
       end
     end
   end
